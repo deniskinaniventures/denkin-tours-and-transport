@@ -90,3 +90,23 @@ margin-top:10px;
   max-width:250px;
   box-shadow:0 2px 8px rgba(0,0,0,0.1);
 }
+.sample-tour{
+  background:#eaf0ea;
+  padding:40px 20px;
+  text-align:center;
+}
+
+.tour-stops{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+}
+
+.stop{
+  background:white;
+  padding:20px;
+  border-radius:8px;
+  max-width:250px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
