@@ -10,7 +10,7 @@ body {
 /* Hero section styling */
 .hero {
   background-color: #1f4d3b; /* deep green */
-  color: #f6f3ea; /* cream text */
+  color: #f8f4e3; /* creamy ivory text */
   padding: 80px 20px;
   text-align: center;
   border-bottom-left-radius: 30px;
@@ -20,7 +20,13 @@ body {
 .hero h1 {
   font-size: 2.8rem;
   margin-bottom: 15px;
-  color: #f6f3ea; /* cream heading */
+  color: #f8f4e3; /* creamy ivory heading */
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  color: #f8f4e3; /* creamy ivory text */
 }
 
 .hero p {
