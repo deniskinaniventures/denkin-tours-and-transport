@@ -1,102 +1,58 @@
 /* BODY */
-body {
+body{
   font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f6f3ea; /* cream background */
-  color: #333;
-  text-align: center;
+  margin:0;
+  background:#f6f3ea; /* cream background */
+  color:#333;
+  text-align:center;
 }
 
 /* HERO / HEADER */
-header.hero {
-  background: #1f4d3b; /* deep green */
-  color: #f8f4e3; /* creamy ivory text */
-  padding: 60px 20px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+header.hero{
+  background:#1f4d3b; /* deep green */
+  color:#f8f4e3; /* creamy ivory text */
+  padding:60px 20px;
+  border-bottom-left-radius:30px;
+  border-bottom-right-radius:30px;
 }
 
 /* BUTTONS */
-.button {
-  display: inline-block;
-  background: #c9a24a; /* gold */
-  color: white;
-  padding: 12px 20px;
-  margin-top: 15px;
-  text-decoration: none;
-  border-radius: 5px;
+.button{
+  display:inline-block;
+  background:#c9a24a; /* gold */
+  color:white;
+  padding:12px 20px;
+  margin-top:15px;
+  text-decoration:none;
+  border-radius:5px;
 }
 
 /* SECTIONS */
-section {
-  padding: 40px 20px;
-  background: #f6f3ea; /* cream background for consistency */
+section{
+  padding:40px 20px;
+  background:#f6f3ea; /* cream background */
 }
 
 /* SERVICES CARDS */
-.services {
-  background: #ffffff;
+.services{
+  background:#ffffff;
 }
 
-.service {
-  margin: 20px;
+.service{
+  margin:20px;
 }
 
 /* GALLERY IMAGES */
-.gallery img {
-  width: 80%;
-  max-width: 500px;
-  margin: 10px;
-  border-radius: 10px;
+.gallery img{
+  width:80%;
+  max-width:500px;
+  margin:10px;
+  border-radius:10px;
 }
 
 /* FOOTER */
-footer {
-  background: #1f4d3b;
-  color: #f8f4e3; /* creamy ivory text */
-  padding: 20px;
-}
-
-/* HAMBURGER MENU */
-.navbar {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
-}
-
-.menu-toggle {
-  cursor: pointer;
-}
-
-.bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px 0;
-  background: #f8f4e3; /* creamy ivory bars */
-}
-
-.nav-list {
-  list-style: none;
-  padding: 15px;
-  margin: 0;
-  display: none;
-  background: #1f4d3b; /* deep green */
-  position: absolute;
-  top: 50px;
-  right: 0;
-  border-radius: 8px;
-  width: 200px;
-  text-align: left;
-}
-
-.nav-list li {
-  margin: 10px 0;
-}
-
-.nav-list a {
-  color: #f8f4e3; /* creamy ivory links */
-  text-decoration: none;
-  font-weight: bold;
+footer{
+  background:#1f4d3b;
+  color:#f8f4e3; /* creamy ivory text */
+  padding:20px;
 }
