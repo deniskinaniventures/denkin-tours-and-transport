@@ -172,3 +172,71 @@ margin-top:10px;
 .cta-button:hover{
   background:#45a049;
 }
+/* Navbar styling */
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#f4f6f2;
+  padding:10px 20px;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Bars for dropdown menu */
+.menu-toggle{
+  display:none;
+  flex-direction:column;
+  cursor:pointer;
+}
+
+.menu-toggle .bar{
+  height:3px;
+  width:25px;
+  background-color:#4CAF50;
+  margin:4px 0;
+  border-radius:2px;
+}
+
+/* Nav list styling */
+.nav-list{
+  list-style:none;
+  display:flex;
+  gap:15px;
+}
+
+.nav-list li a{
+  text-decoration:none;
+  color:#4CAF50;
+  font-weight:bold;
+  padding:8px 12px;
+  border-radius:5px;
+  transition:0.3s;
+}
+
+.nav-list li a:hover{
+  background:#45a049;
+  color:white;
+}
+
+/* Responsive mobile menu */
+@media (max-width:768px){
+  .menu-toggle{
+    display:flex;
+  }
+  .nav-list{
+    position:absolute;
+    top:60px;
+    right:0;
+    background:#f4f6f2;
+    flex-direction:column;
+    width:200px;
+    display:none;
+    box-shadow:0 2px 10px rgba(0,0,0,0.2);
+  }
+  .nav-list.active{
+    display:flex;
+  }
+}
