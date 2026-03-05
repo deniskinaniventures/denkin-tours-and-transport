@@ -1,3 +1,36 @@
+/* Hero section styling */
+.hero {
+  background: linear-gradient(135deg, #1f4d3b, #4caf50); /* green gradient */
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.hero .button {
+  background: #c9a24a;
+  color: white;
+  padding: 15px 25px;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.hero .button:hover {
+  background: #a17a34; /* darker gold on hover */
+}
 body{
 font-family: Arial, sans-serif;
 margin:0;
