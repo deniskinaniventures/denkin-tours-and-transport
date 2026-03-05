@@ -1,4 +1,4 @@
-/* Body styling */
+/* BODY */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -7,125 +7,96 @@ body {
   text-align: center;
 }
 
-/* Hero section styling */
-.hero {
-  background-color: #1f4d3b; /* deep green */
+/* HERO / HEADER */
+header.hero {
+  background: #1f4d3b; /* deep green */
   color: #f8f4e3; /* creamy ivory text */
-  padding: 80px 20px;
-  text-align: center;
+  padding: 60px 20px;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
 }
 
-.hero h1 {
-  font-size: 2.8rem;
-  margin-bottom: 15px;
-  color: #f8f4e3; /* creamy ivory heading */
+/* BUTTONS */
+.button {
+  display: inline-block;
+  background: #c9a24a; /* gold */
+  color: white;
+  padding: 12px 20px;
+  margin-top: 15px;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 25px;
+/* SECTIONS */
+section {
+  padding: 40px 20px;
+  background: #f6f3ea; /* cream background for consistency */
+}
+
+/* SERVICES CARDS */
+.services {
+  background: #ffffff;
+}
+
+.service {
+  margin: 20px;
+}
+
+/* GALLERY IMAGES */
+.gallery img {
+  width: 80%;
+  max-width: 500px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+  background: #1f4d3b;
   color: #f8f4e3; /* creamy ivory text */
+  padding: 20px;
 }
 
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 25px;
-  color: #f6f3ea; /* cream text */
+/* HAMBURGER MENU */
+.navbar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
 }
 
-.hero .button {
-  background: #c9a24a; /* gold button */
-  color: white;
-  padding: 15px 25px;
-  font-size: 1rem;
+.menu-toggle {
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  background: #f8f4e3; /* creamy ivory bars */
+}
+
+.nav-list {
+  list-style: none;
+  padding: 15px;
+  margin: 0;
+  display: none;
+  background: #1f4d3b; /* deep green */
+  position: absolute;
+  top: 50px;
+  right: 0;
   border-radius: 8px;
+  width: 200px;
+  text-align: left;
+}
+
+.nav-list li {
+  margin: 10px 0;
+}
+
+.nav-list a {
+  color: #f8f4e3; /* creamy ivory links */
   text-decoration: none;
-  transition: background 0.3s;
-}
-
-.hero .button:hover {
-  background: #a17a34; /* darker gold on hover */
-}
-/* Hero section styling */
-.hero {
-  background: linear-gradient(135deg, #1f4d3b, #4caf50); /* green gradient */
-  color: white;
-  padding: 80px 20px;
-  text-align: center;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-}
-
-.hero h1 {
-  font-size: 2.8rem;
-  margin-bottom: 15px;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 25px;
-}
-
-.hero .button {
-  background: #c9a24a;
-  color: white;
-  padding: 15px 25px;
-  font-size: 1rem;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-
-.hero .button:hover {
-  background: #a17a34; /* darker gold on hover */
-}
-body{
-font-family: Arial, sans-serif;
-margin:0;
-background:#f6f3ea;
-color:#333;
-text-align:center;
-}
-
-header{
-background:#1f4d3b;
-color:white;
-padding:60px 20px;
-}
-
-.button{
-display:inline-block;
-background:#c9a24a;
-color:white;
-padding:12px 20px;
-margin-top:15px;
-text-decoration:none;
-border-radius:5px;
-}
-
-section{
-padding:40px 20px;
-}
-
-.services{
-background:#ffffff;
-}
-
-.service{
-margin:20px;
-}
-
-.gallery img{
-width:80%;
-max-width:500px;
-margin:10px;
-border-radius:10px;
-}
-
-footer{
-background:#1f4d3b;
-color:white;
-padding:20px;
+  font-weight: bold;
 }
