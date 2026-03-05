@@ -70,3 +70,23 @@ font-size:20px;
 font-weight:bold;
 margin-top:10px;
 }
+.why-denkin{
+  background:#f4f6f2;
+  padding:40px 20px;
+  text-align:center;
+}
+
+.features{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+}
+
+.feature{
+  background:white;
+  padding:20px;
+  border-radius:8px;
+  max-width:250px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
