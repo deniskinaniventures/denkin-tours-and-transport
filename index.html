@@ -4,129 +4,252 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DenKin Tours and Transport</title>
-<link rel="stylesheet" href="style.css">
+<style>
+/* ----- Global Styles ----- */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f9f5f0; /* warm cream */
+  color: #4a4a4a;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* ----- Header & Footer ----- */
+header, footer {
+  background: #2c5d3f;
+  color: white;
+  padding: 60px 20px;
+}
+
+header h1, footer p {
+  color: #f2d181;
+  margin: 0;
+}
+
+header p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* ----- Buttons ----- */
+.button {
+  display: inline-block;
+  background: #f2d181;
+  color: #2c5d3f;
+  padding: 12px 25px;
+  margin-top: 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background: #d4b25f;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* ----- Sections ----- */
+section {
+  padding: 50px 20px;
+  background: #fdfaf5;
+  border-radius: 10px;
+  margin: 30px auto;
+  max-width: 1100px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Section Headings */
+h2 {
+  color: #2c5d3f;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* ----- About Section ----- */
+.about p {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ----- Services Section ----- */
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  background: #f5f2eb;
+}
+
+.service {
+  background: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  flex: 1 1 250px;
+  max-width: 300px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.service:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.service h3 {
+  color: #2c5d3f;
+  margin-bottom: 10px;
+}
+
+/* ----- Experience Section ----- */
+.experience {
+  background: #e9f1ea;
+  padding: 60px 20px;
+}
+
+.experience h3 {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.experience ul {
+  list-style: none;
+  padding: 0;
+}
+
+.experience li {
+  margin: 10px 0;
+}
+
+/* Price styling */
+.price {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 15px;
+  color: #2c5d3f;
+}
+
+/* ----- Gallery Section ----- */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.gallery img {
+  width: 45%;
+  max-width: 450px;
+  border-radius: 10px;
+  border: 3px solid #f2d181;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* ----- Contact Section ----- */
+.contact p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+/* ----- Footer ----- */
+footer {
+  padding: 25px;
+}
+
+/* ----- Responsive ----- */
+@media(max-width:768px){
+  .services {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .gallery img {
+    width: 80%;
+  }
+}
+</style>
 </head>
+
 <body>
- <body>
- <nav class="navbar">
 
-<div class="menu-toggle" id="mobile-menu">
-<span class="bar"></span>
-<span class="bar"></span>
-<span class="bar"></span>
-</div>
-
-<ul class="nav-list" id="nav-list">
-<li><a href="#services">Services</a></li>
-<li><a href="#why-denkin">Why Ride With DenKin</a></li>
-<li><a href="#sample-tour">3-Hour Tour</a></li>
-<li><a href="https://wa.me/256756712936">Book WhatsApp</a></li>
-</ul>
-
- </nav>
-<header class="hero"> 
-<!-- Top navigation with hamburger menu -->
-<nav class="navbar">
-  <div class="menu-toggle" id="mobile-menu">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-  </div>
-  <ul class="nav-list">
-    <li><a href="#top">Home</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#why-denkin">Why Ride With DenKin</a></li>
-    <li><a href="#sample-tour">3-Hour Tour</a></li>
-    <li><a href="#contact">Book WhatsApp</a></li>
-  </ul>
-</nav>
-<header class="hero">
-<h1>DenKin Tours and Transport</h1>
-<p>Private Airport Transfers & Kampala City Experiences</p>
-<a class="button" href="https://wa.me/256756712936">Book via WhatsApp</a>
+<header>
+  <h1>DenKin Tours and Transport</h1>
+  <p>Private Airport Transfers & Kampala City Experiences</p>
+  <a class="button" href="https://wa.me/256756712936">Book via WhatsApp</a>
 </header>
 
 <section class="about">
-
-<h2>About Us</h2>
-
-<p>
-DenKin Tours and Transport provides reliable airport transfers,
-private city tours, and comfortable transport across Kampala
-and beyond. We focus on safe, friendly and professional service
-for visitors and residents.
-</p>
-
+  <h2>About Us</h2>
+  <p>
+    DenKin Tours and Transport provides reliable airport transfers,
+    private city tours, and comfortable transport across Kampala
+    and beyond. We focus on safe, friendly and professional service
+    for visitors and residents.
+  </p>
 </section>
-
 
 <section class="services">
+  <h2>Our Services</h2>
 
-<h2>Our Services</h2>
+  <div class="service">
+    <h3>Airport Transfers</h3>
+    <p>Reliable transport between Entebbe Airport and Kampala.</p>
+  </div>
 
-<div class="service">
-<h3>Airport Transfers</h3>
-<p>Reliable transport between Entebbe Airport and Kampala.</p>
-</div>
+  <div class="service">
+    <h3>Kampala City Tours</h3>
+    <p>Discover Kampala's culture, markets and landmarks.</p>
+  </div>
 
-<div class="service">
-<h3>Kampala City Tours</h3>
-<p>Discover Kampala's culture, markets and landmarks.</p>
-</div>
-
-<div class="service">
-<h3>Private Transport</h3>
-<p>Comfortable travel within Kampala and upcountry.</p>
-</div>
-
+  <div class="service">
+    <h3>Private Transport</h3>
+    <p>Comfortable travel within Kampala and upcountry.</p>
+  </div>
 </section>
 
+<section class="experience">
+  <h2>Featured Experience</h2>
+  <h3>Kampala City Highlights (3 Hours)</h3>
+  <p>
+    Discover the vibrant capital of Uganda with a relaxed
+    private city tour. Perfect for visitors with limited time
+    who want a safe introduction to Kampala.
+  </p>
+
+  <ul>
+    <li>Comfortable private transport</li>
+    <li>Local guide insight</li>
+    <li>Visit key Kampala viewpoints</li>
+    <li>Optional coffee stop</li>
+  </ul>
+
+  <p class="price">Starting from $50</p>
+  <a class="button" href="https://wa.me/256756712936">Reserve Your Tour</a>
+</section>
 
 <section class="gallery">
-
-<h2>Your Ride</h2>
-
-<img src="images/car-front.jpg" alt="DenKin transport vehicle">
-
-<img src="images/car-back.jpg" alt="DenKin transport vehicle">
-
+  <h2>Your Ride</h2>
+  <img src="car-front.jpg" alt="DenKin transport vehicle">
+  <img src="car-back.jpg" alt="DenKin transport vehicle">
 </section>
-
 
 <section class="contact">
-
-<h2>Contact</h2>
-
-<p><strong>Phone:</strong> +256 788 712 936</p>
-
-<p><strong>WhatsApp:</strong> +256 756 712 936</p>
-
-<p><strong>Email:</strong> deniskinani504@gmail.com</p>
-
-<a class="button" href="https://wa.me/256756712936">
-Book Your Ride
-</a>
-
+  <h2>Contact</h2>
+  <p><strong>Phone:</strong> +256 788 712 936</p>
+  <p><strong>WhatsApp:</strong> +256 756 712 936</p>
+  <p><strong>Email:</strong> deniskinani504@gmail.com</p>
+  <a class="button" href="https://wa.me/256756712936">Book Your Ride</a>
 </section>
 
-
 <footer>
+  <p>© DenKin Tours and Transport</p>
+</footer>
 
-<p>© DenKin Tours and Transport</p>
-
-<script>
-
-const menu = document.getElementById("mobile-menu");
-const nav = document.getElementById("nav-list");
-
-menu.addEventListener("click", function(){
-if(nav.style.display === "block"){
-nav.style.display = "none";
-}else{
-nav.style.display = "block";
-}
-});
-
-</script>
 </body>
 </html>
