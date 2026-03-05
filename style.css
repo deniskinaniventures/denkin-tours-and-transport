@@ -110,3 +110,65 @@ margin-top:10px;
   max-width:250px;
   box-shadow:0 2px 8px rgba(0,0,0,0.1);
 }
+/* Nav bar styling */
+.navbar{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  background:#f4f6f2; /* cream background */
+  padding:10px 0;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-button{
+  text-decoration:none;
+  color:#4CAF50;
+  font-weight:bold;
+  padding:8px 12px;
+  border-radius:5px;
+  transition:0.3s;
+}
+
+.nav-button:hover{
+  background:#45a049;
+  color:white;
+}
+
+/* Hero section styling */
+.hero{
+  text-align:center;
+  padding:30px 20px;
+  background:#fffefb;
+}
+
+.hero-image{
+  max-width:90%;
+  height:auto;
+  border-radius:10px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* CTA buttons under hero */
+.cta-buttons{
+  text-align:center;
+  margin:20px 0;
+}
+
+.cta-button{
+  display:inline-block;
+  background:#4CAF50;
+  color:white;
+  padding:12px 24px;
+  margin:10px 5px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.cta-button:hover{
+  background:#45a049;
+}
