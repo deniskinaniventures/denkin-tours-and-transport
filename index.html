@@ -98,6 +98,13 @@ Book Your Ride
 <p>© DenKin Tours and Transport</p>
 
 </footer>
+<script>
+const mobileMenu = document.getElementById('mobile-menu');
+const navList = document.querySelector('.nav-list');
 
+mobileMenu.addEventListener('click', () => {
+  navList.style.display = navList.style.display === 'block' ? 'none' : 'block';
+});
+</script>
 </body>
 </html>
