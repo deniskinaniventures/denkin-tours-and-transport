@@ -76,27 +76,42 @@ body{
 }
 
 /* HERO */
-.hero{
-  background:#2c5d3f url("airport-car.png") top/cover no-repeat;
-  color:white;
-  padding:90px 20px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  position:relative;
-  transition:background-image 1s ease-in-out;
+.hero {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  padding: 90px 20px;
+  background-color: #2c5d3f; /* fallback */
 }
 
-.hero::after{
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.55); /* slightly darker overlay for contrast */
+.hero-img {
+  width: 100%;
+  height: auto;   /* ensures full image visible */
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 1;
 }
 
+.hero-img.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
 .hero-content{
   position:relative;
   max-width:700px;
@@ -304,15 +319,20 @@ footer{
   </div>
 </nav>
 
-<!-- HERO -->
 <section id="hero" class="hero">
+  <!-- Full images for animation -->
+  <img src="airport-car.png" class="hero-img active" alt="Airport Transfer">
+  <img src="kampala-city.jpg" class="hero-img" alt="City Tour">
+  <img src="safari-van.jpg" class="hero-img" alt="Safari Transport">
+
+  <!-- Overlay text -->
   <div class="hero-content">
     <h1>DenKin Tours and Transport</h1>
     <p id="hero-caption">Private Airport Transfers Between Entebbe and Kampala</p>
     <p>Reliable transport – Kampala and beyond!</p>
   </div>
 </section>
-
+ 
 <!-- ABOUT -->
 <section id="about">
 <h2>About Us</h2>
@@ -832,6 +852,19 @@ function hideDiary(id){
   document.getElementById('travel-diary').scrollIntoView({ behavior: 'smooth' });
 }
 </script> 
+ <!-- Other page content -->
 
+<script>
+// Select all hero images
+const slides = document.querySelectorAll('.hero-img');
+let current = 0;
+
+// Function to show next slide
+setInterval(() => {
+  slides[current].classList.remove('active'); // hide current
+  current = (current + 1) % slides.length;    // move to next
+  slides[current].classList.add('active');    // show next
+}, 5000); // change every 5 seconds
+</script>
 </body>
 </html>
