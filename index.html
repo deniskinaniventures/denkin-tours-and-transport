@@ -320,39 +320,6 @@ footer{
 </nav>
 
 <body>
-
-
-/* HERO SLIDER */
-const heroImages=[
-"airport-car.png",
-"gorilla.png",
-"safari-lion.jpeg",
-"murchison-falls.jpg",
-"kampala-city.jpg",
-"coffee-farm.jpg"
-];
-const heroCaptions=[
-"Private Airport Transfers Between Entebbe and Kampala",
-"Gorilla Trekking Adventures in Bwindi Forest",
-"Uganda Wildlife Safari Adventures",
-"Murchison Falls National Park Experience",
-"Explore Kampala With a Private Guide",
-"Agro-Tourism and Cultural Farm Experiences"
-];
-let index=0;
-const hero=document.getElementById("hero");
-const caption=document.getElementById("hero-caption");
-function changeHero(){
-  index++;
-  if(index>=heroImages.length) index=0;
-  caption.style.opacity=0;
-  setTimeout(()=>{
-    hero.style.backgroundImage=`url('${heroImages[index]}')`;
-    caption.textContent=heroCaptions[index];
-    caption.style.opacity=1;
-  },400);
-}
-setInterval(changeHero,5000);
  
 <!-- ABOUT -->
 <section id="about">
@@ -851,6 +818,54 @@ window.addEventListener("scroll",()=>{
   }
 });
 </script>
+...all your sections above...
 
+<script>
+/* HERO SLIDER */
+const heroImages=[
+"airport-car.png",
+"gorilla.png",
+"safari-lion.jpeg",
+"murchison-falls.jpg",
+"kampala-city.jpg",
+"coffee-farm.jpg"
+];
+
+const heroCaptions=[
+"Private Airport Transfers Between Entebbe and Kampala",
+"Gorilla Trekking Adventures in Bwindi Forest",
+"Uganda Wildlife Safari Adventures",
+"Murchison Falls National Park Experience",
+"Explore Kampala With a Private Guide",
+"Agro-Tourism and Cultural Farm Experiences"
+];
+
+let index=0;
+
+window.onload = function() {
+
+  const hero=document.getElementById("hero");
+  const caption=document.getElementById("hero-caption");
+
+  function changeHero(){
+    index++;
+    if(index>=heroImages.length) index=0;
+
+    caption.style.opacity=0;
+
+    setTimeout(()=>{
+      hero.style.backgroundImage=`url('${heroImages[index]}')`;
+      caption.textContent=heroCaptions[index];
+      caption.style.opacity=1;
+    },400);
+  }
+
+  setInterval(changeHero,5000);
+
+};
+</script>
+
+</body>
+</html>
 </body>
 </html>
