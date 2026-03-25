@@ -729,8 +729,6 @@ function hideDiary(id){
   }
   </script>
 
-</section>
-
 <style>
 /* Icon colors and hover */
 .contact-icon.phone { color: #1a4d8f; font-size:1.2em; transition: transform 0.2s, filter 0.2s; }
@@ -761,22 +759,6 @@ function hideDiary(id){
 </footer>
 
 <a href="#hero" class="fixed-home" id="homeBtn">Home</a>
-
-/* HOME BUTTON */
-const homeBtn=document.getElementById("homeBtn");
-window.addEventListener("scroll",()=>{
-  if(window.scrollY>200){
-    homeBtn.style.right="20px";
-    homeBtn.style.opacity="1";
-  } else {
-    homeBtn.style.right="-80px";
-    homeBtn.style.opacity="0";
-  }
-});
-</script>
-...all your sections above...
-
-<script>
 
 /* MENU TOGGLE */
 function toggleMenu(){
