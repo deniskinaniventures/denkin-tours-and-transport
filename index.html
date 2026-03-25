@@ -334,6 +334,33 @@ footer{
     <a href="#contact" class="button">Plan Your Trip</a>
   </div>
 </div>
+
+ /* Dropdown menu styles */
+#dropdown {
+  display: none;          /* hidden by default */
+  flex-direction: column;
+  background-color: #fff; /* menu background */
+  position: relative;     /* important — makes it push content */
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 1;
+}
+
+#dropdown.show {
+  display: flex;          /* shows when toggled */
+}
+
+#dropdown a {
+  padding: 15px 20px;
+  text-decoration: none;
+  color: #333;
+  border-bottom: 1px solid #eee;
+}
+
+#dropdown a:hover {
+  background-color: #f2f2f2;
+}
+ 
 <!-- ABOUT -->
 <section id="about">
 <h2>About Us</h2>
