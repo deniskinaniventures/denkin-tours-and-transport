@@ -333,19 +333,28 @@ footer{
   </div>
 </div>
  
-<style> 
+<style>
 /* =========================
-   DROPDOWN MENU FIX
+   NAVBAR DROPDOWN & SPACING FIX
 ========================= */
+
+/* Navbar wrapper should be positioned above hero */
+.navbar {
+  position: relative;  /* ensures stacking context */
+  z-index: 10001;      /* higher than hero, lower than dropdown if needed */
+}
+
+/* Dropdown menu */
 #dropdown {
-  display: none;             /* hidden by default */
+  display: none;               /* hidden by default */
   flex-direction: column;
-  background-color: #fff;    /* menu background */
-  position: absolute;        /* float above hero content */
-  top: 60px;                 /* height of navbar */
+  background-color: #fff;      /* menu background */
+  position: absolute;          /* floats above everything */
+  top: 100%;                   /* right below navbar */
+  left: 0;
   width: 100%;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  z-index: 10000;             /* way above hero image */
+  z-index: 10002;              /* ensures dropdown is above hero and navbar */
 }
 
 /* Show dropdown when toggled */
@@ -365,12 +374,19 @@ footer{
   background-color: #f2f2f2;
 }
 
-/* Ensure hero stays behind dropdown */
+/* Hero stays under dropdown */
 .hero {
   position: relative;
-  z-index: 1;                /* keeps hero under dropdown */
+  z-index: 1;  /* keeps hero under navbar & dropdown */
 }
-</style> 
+
+/* Push About section below navbar/dropdown */
+#about {
+  margin-top: 100px;  /* adjust according to navbar height */
+  position: relative;
+  z-index: 1;
+}
+</style>
  
 <!-- ABOUT -->
 <section id="about">
