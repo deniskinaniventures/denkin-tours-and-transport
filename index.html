@@ -318,8 +318,6 @@ footer{
     <a href="#contact">Contact</a>
   </div>
 </nav>
-
-<body>
  
 <!-- ABOUT -->
 <section id="about">
@@ -518,7 +516,7 @@ markets and cultural locations.
 </div>
     <!-- MURCHISON FALLS -->
     <div class="diary-card" onclick="showDiary('murchison')" style="cursor:pointer; background:#fff; padding:20px; border-radius:10px; box-shadow:0 4px 6px rgba(0,0,0,0.1); transition: transform 0.2s, box-shadow 0.2s;">
-      <img src=murchison-placeholder.jpg" style="width:100%; border-radius:10px;" alt="Murchison Falls">
+      <img src="murchison-placeholder.jpg" style="width:100%; border-radius:10px;" alt="Murchison Falls">
       <h3>Murchison Falls</h3>
     </div>
 
@@ -641,10 +639,6 @@ function showDiary(id){
   document.querySelectorAll('.diary-detail').forEach(sec => sec.style.display='none');
   document.getElementById(id).style.display='block';
   window.scrollTo(0,0);
-}
-function hideDiary(id){
-  document.getElementById(id).style.display='none';
-}
 </script>
  
 <!-- GUIDE -->
@@ -835,49 +829,71 @@ window.addEventListener("scroll",()=>{
 ...all your sections above...
 
 <script>
+
+/* MENU TOGGLE */
+function toggleMenu(){
+  const menu = document.getElementById("dropdown");
+  menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+}
+
 /* HERO SLIDER */
-const heroImages=[
-"airport-car.png",
-"gorilla.png",
-"safari-lion.jpeg",
-"murchison-falls.jpg",
-"kampala-city.jpg",
-"coffee-farm.jpg"
+const heroImages = [
+  "airport-car.png",
+  "gorilla.png",
+  "safari-lion.jpeg",
+  "murchison-falls.jpg",
+  "kampala-city.jpg",
+  "coffee-farm.jpg"
 ];
 
-const heroCaptions=[
-"Private Airport Transfers Between Entebbe and Kampala",
-"Gorilla Trekking Adventures in Bwindi Forest",
-"Uganda Wildlife Safari Adventures",
-"Murchison Falls National Park Experience",
-"Explore Kampala With a Private Guide",
-"Agro-Tourism and Cultural Farm Experiences"
+const heroCaptions = [
+  "Private Airport Transfers Between Entebbe and Kampala",
+  "Gorilla Trekking Adventures in Bwindi Forest",
+  "Uganda Wildlife Safari Adventures",
+  "Murchison Falls National Park Experience",
+  "Explore Kampala With a Private Guide",
+  "Agro-Tourism and Cultural Farm Experiences"
 ];
 
-let index=0;
+let index = 0;
 
-window.onload = function() {
+window.addEventListener("load", function(){
 
-  const hero=document.getElementById("hero");
-  const caption=document.getElementById("hero-caption");
+  const hero = document.getElementById("hero");
+  const caption = document.getElementById("hero-caption");
+
+  // Set first image
+  hero.style.backgroundImage = `url('${heroImages[0]}')`;
+  caption.textContent = heroCaptions[0];
 
   function changeHero(){
-    index++;
-    if(index>=heroImages.length) index=0;
+    index = (index + 1) % heroImages.length;
 
-    caption.style.opacity=0;
+    caption.style.opacity = 0;
 
-    setTimeout(()=>{
-      hero.style.backgroundImage=`url('${heroImages[index]}')`;
-      caption.textContent=heroCaptions[index];
-      caption.style.opacity=1;
-    },400);
+    setTimeout(() => {
+      hero.style.backgroundImage = `url('${heroImages[index]}')`;
+      caption.textContent = heroCaptions[index];
+      caption.style.opacity = 1;
+    }, 400);
   }
 
-  setInterval(changeHero,5000);
+  setInterval(changeHero, 5000);
+});
 
-};
+/* HOME BUTTON */
+const homeBtn = document.getElementById("homeBtn");
+
+window.addEventListener("scroll", () => {
+  if(window.scrollY > 200){
+    homeBtn.style.right = "20px";
+    homeBtn.style.opacity = "1";
+  } else {
+    homeBtn.style.right = "-80px";
+    homeBtn.style.opacity = "0";
+  }
+});
+
 </script>
-
 </body>
 </html>
