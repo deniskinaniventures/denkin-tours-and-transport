@@ -342,24 +342,24 @@ document.addEventListener('click', function(e){
   }
 });
 
+ window.addEventListener("DOMContentLoaded", () => {
+
   const whatsappBtn = document.querySelector(".whatsapp-float");
+  const homeBtn = document.getElementById("homeBtn");
 
-window.addEventListener("scroll", () => {
-  if(window.scrollY > 200){
-    whatsappBtn.classList.add("show");
-  } else {
-    whatsappBtn.classList.remove("show");
-  }
-});
- const homeBtn = document.getElementById("homeBtn");
+  window.addEventListener("scroll", () => {
 
-window.addEventListener("scroll", () => {
-  if(window.scrollY > 200){
-    homeBtn.classList.add("show");
-  } else {
-    homeBtn.classList.remove("show");
-  }
-});
+    if (window.scrollY > 200) {
+      whatsappBtn.classList.add("show");
+      homeBtn.classList.add("show");
+    } else {
+      whatsappBtn.classList.remove("show");
+      homeBtn.classList.remove("show");
+    }
+
+  });
+
+}); 
  
 </script>
 
